@@ -15,4 +15,6 @@ string="ilovepython"
 sli=slice(3)=slice(0,3)=slice(0,3,1)
 string[sli]=string[0:3]=string[0:3:1]
 
-
+<h5>Q20 pop()</h5>
+pop() will kick the last item out.
+if a.pop() >10: => no matter if condition is True or False, pop() will act.
