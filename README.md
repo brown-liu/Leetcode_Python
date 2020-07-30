@@ -15,4 +15,6 @@ string="ilovepython"
 sli=slice(3)=slice(0,3)=slice(0,3,1)
 string[sli]=string[0:3]=string[0:3:1]
 
-
+<h5>Q21 </h5>
+if not a or not b: <br>
+    print(a or b)
