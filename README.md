@@ -18,3 +18,6 @@ string[sli]=string[0:3]=string[0:3:1]
 <h5>Q21 </h5>
 if not a or not b: <br>
     print(a or b)
+
+<h5>Q66 map()</h5>
+map(function,iterables)
