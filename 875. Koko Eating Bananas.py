@@ -23,27 +23,46 @@ Constraints:
 1 <= piles.length <= 10^4
 piles.length <= H <= 10^9
 1 <= piles[i] <= 10^9"""
-class Solution:
+
+
+# class Solution:
 #     def minEatingSpeed(self, piles, H):
-    def minEatingSpeed(self,piles, H):
+#         k_low, k_hi = 0, H
+#         timeSpend = 0
+#
+#         while timeSpend <= H:
+#
+#             for banana in piles:
+#                 k_mid = k_low + (k_hi - k_low) / 2
+#
+#                 timeSpend += banana / k_mid
+#
+#             if timeSpend > H:
+#
+#                 k_low = k_mid
+#
+#             else:
+#
+#                 k_hi = k_mid+1
+#
+#         return k_low
+    ##############
+def minEatingSpeed(piles, H):
+    def feasible(speed) -> bool:
+        # return sum(math.ceil(pile / speed) for pile in piles) <= H  # slower
+        return sum((pile - 1) / speed + 1 for pile in piles) <= H  # faster
 
-        low, high = 0 , max(piles)
-        timespend=H+1
-        mid=0
-        while timespend>H:
-            timespend = 0
-            mid=(high+low)//2
+    left, right = 1, max(piles)
+    while left < right:
+        mid = left  + (right - left) // 2
+        if feasible(mid):
+            right = mid
+        else:
+            left = mid + 1
+    return left
 
-            for i in piles:
-                if i/mid<=1:
-                        timespend+=1
-                elif i%mid==0:
-                    timespend+=i/mid
-                else: timespend+=i//mid+1
-            if timespend>H:
-                low=mid+1  #?????
 
-        return (low+high)//2
+
 
 solution=Solution()
 print(solution.minEatingSpeed([2,6,3,6,2,6],6))

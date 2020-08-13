@@ -1,6 +1,8 @@
 
-nums=[1,2,3,4,-9,-10,100]
 
-print(max(nums))
 
-a='123123'
+dict={'abc':123,"bbbc":123213}
+
+c=dict.get('abc',default="123323")
+
+print(c)
