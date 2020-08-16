@@ -1,8 +1,17 @@
+import time
 
 
+def get_time(func):
+    a=time.time()
+    func()
+    print( time.time()-a)
 
-dict={'abc':123,"bbbc":123213}
+@get_time
+def run_time():
+    time.sleep(3)
+    string = f'i have slept for {3} seconds'
+    return string
 
-c=dict.get('abc',default="123323")
 
-print(c)
+x=run_time()
+print(x)
