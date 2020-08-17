@@ -21,3 +21,7 @@ if not a or not b: <br>
 
 <h5>Q66 map()</h5>
 map(function,iterables)
+
+<h5>sorted() return new list/string  & OBJ.sort() do not handle string . inline operation</h5>
+  sorted('dbca')
+  >>> 'abcd'
