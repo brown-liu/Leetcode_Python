@@ -14,8 +14,8 @@ recursive (output of a function as input of same question)<br>
 
 ###Comparison-based Sorting Algorithms:
 1. BUB - Bubble Sort,**Compare left and right. deal with only two element at a time. and loop around the whole list**
-2. SEL - Selection Sort **Compare one element with the rest in the list, find the smallest one and move to front side**
-3. INS - Insertion Sort
+2. SEL - Selection Sort **Compare one element with the rest in the list, find the smallest one and pop to new list**
+3. INS - Insertion Sort **Get value (from 1 to len()), and compare all the value on its left. and move each element to right by 1 index at the same time to make space. once found certain value smaller than this value, stop and sits in that index.**
 4. MER - Merge Sort (recursive implementation)
 5. QUI - Quick Sort (recursive implementation)
 6. R-Q - Random Quick Sort (recursive implementation).
