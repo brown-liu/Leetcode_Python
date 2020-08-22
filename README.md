@@ -23,5 +23,8 @@ if not a or not b: <br>
 map(function,iterables)
 
 <h5>sorted() return new list/string  & OBJ.sort() do not handle string . inline operation</h5>
-  sorted('dbca')
-  >>> 'abcd'
+  sorted('dbca') ='abcd'
+sort is list.methods 
+sorted can work on any iterative obejcts.
+sorted(iterable, cmp=None, key=None, reverse=False)
+example: => see 'hackerrank\Print Function.py'

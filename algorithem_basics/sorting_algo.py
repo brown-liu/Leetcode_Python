@@ -2,6 +2,7 @@ from timeit import timeit
 import random
 
 
+
 class Sorting:
 
     def __init__(self, max_array_length, number_of_array):
