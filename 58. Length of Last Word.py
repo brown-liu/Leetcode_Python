@@ -11,15 +11,16 @@ class Solution:
     def lengthOfLastWord(self, s: str) -> int:
         if len(s) == 0:
             return 0
-        space=''
+        space = ''
         for i in range(len(s)):
-            space+=' '
+            space += ' '
         if space == s:
             return 0
         return len(self.findThatLast(s))
-    def findThatLast(self,s):
 
-        s=s.split(' ')
+    def findThatLast(self, s):
+
+        s = s.split(' ')
         print(s)
         for space in range(s.count('')):
             s.remove('')
@@ -27,10 +28,9 @@ class Solution:
         return s[-1]
 
 
-
-solution=Solution()
-testset=[' a',' ab ','acbc ',' brown liusarah',' brown l ','brown lu','',' asd  asd asdsad asd as d      ','   ']
+solution = Solution()
+testset = [' a', ' ab ', 'acbc ', ' brown liusarah', ' brown l ', 'brown lu', '', ' asd  asd asdsad asd as d      ',
+           '   ']
 
 for i in testset:
     print(solution.lengthOfLastWord(i))
-

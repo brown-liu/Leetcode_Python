@@ -22,22 +22,24 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
+
+
 class Solution:
-    max=0
+    max = 0
+
     def maxDepth(self, root: TreeNode) -> int:
-        self.depth(1,root)
+        self.depth(1, root)
         return self.max
 
-    def depth(self,count,node):
-        if node==None:
+    def depth(self, count, node):
+        if node == None:
             return
-        if node.left!=None:
-            self.depth(count+1,node.left)
-        if node.right!=None:
-            self.depth(count+1,node.right)
-        if count>self.max:
-            self.max=count
+        if node.left != None:
+            self.depth(count + 1, node.left)
+        if node.right != None:
+            self.depth(count + 1, node.right)
+        if count > self.max:
+            self.max = count
 
 
-node=TreeNode()
-
+node = TreeNode()

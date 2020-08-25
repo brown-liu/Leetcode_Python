@@ -8,4 +8,5 @@ def mySqrt(x: int) -> int:
             right = mid
     return left - 1
 
+
 print(mySqrt(10))

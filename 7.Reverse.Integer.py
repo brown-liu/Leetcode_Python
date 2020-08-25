@@ -16,10 +16,11 @@ class Solution:
 
         return str_output
 
-s=Solution()
-li=[129,-1222,339,1,200]
+
+s = Solution()
+li = [129, -1222, 339, 1, 200]
 for i in li:
     print(s.reverse(i))
 
-x=2**32
+x = 2 ** 32
 print(x)

@@ -21,17 +21,16 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
+
+
 class Solution:
     def sortedArrayToBST(self, nums):
-        if nums==[]:
+        if nums == []:
             return None
-        middle=len(nums)//2
+        middle = len(nums) // 2
 
         return TreeNode(
             val=nums[middle],
             left=self.sortedArrayToBST(nums[:middle]),
-            right=self.sortedArrayToBST(nums[middle+1:])
+            right=self.sortedArrayToBST(nums[middle + 1:])
         )
-
-
-

@@ -11,12 +11,12 @@
 ############################################Nested Lists#######################################################################
 students = [['Harry', 37.21], ['Berry', 37.21], ['Tina', 37.2], ['Akriti', 41], ['Harsh', 39]]
 
-newlist=sorted(students,key=lambda x:(-x[1],x[0]),reverse=True)
+newlist = sorted(students, key=lambda x: (-x[1], x[0]), reverse=True)
 
-for i in range(len([x for x in newlist if x[1]==newlist[0][1]])):
+for i in range(len([x for x in newlist if x[1] == newlist[0][1]])):
     newlist.pop(0)
-li=[]
-for i in range(len([x for x in newlist if x[1]==newlist[0][1]])):
+li = []
+for i in range(len([x for x in newlist if x[1] == newlist[0][1]])):
     li.append(newlist.pop(0))
 li.sort()
 for i in li:

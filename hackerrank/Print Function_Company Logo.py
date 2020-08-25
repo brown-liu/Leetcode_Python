@@ -27,10 +27,6 @@ a 2
 c 2
 '''
 
-
-
-
-
 import math
 import os
 import random
@@ -40,9 +36,9 @@ from collections import Counter
 
 if __name__ == '__main__':
     s = 'aaaaaaabbbbbccccccccccccss'
-    chars=Counter(s).items()
+    chars = Counter(s).items()
     print(chars)
-    rearranged=sorted(chars,key=lambda loc:(-loc[1],loc[0]),reverse=False)
+    rearranged = sorted(chars, key=lambda loc: (-loc[1], loc[0]), reverse=False)
     print(rearranged)
     for i in rearranged:
         print(f'{i[0]} {i[1]}')

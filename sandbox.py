@@ -8,10 +8,11 @@
 
 
 from collections import Counter
-s='asdgSDgasfga'
-a=[x for x in s]
+
+s = 'asdgSDgasfga'
+a = [x for x in s]
 
 print(a.count('a'))
-x='2 2 2 3 4 4'
+x = '2 2 2 3 4 4'
 arr = map(int, x.split())
 print(max(list(arr)))

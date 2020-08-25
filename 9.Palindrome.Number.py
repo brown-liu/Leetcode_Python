@@ -10,20 +10,19 @@ class Solution:
             return False
 
 
+question = [141, 3883, 134, 541]
+answer = [True, True, False, False]
 
-question=[141,3883,134,541]
-answer=[True,True,False,False]
-
-solution=Solution()
-result=[]
+solution = Solution()
+result = []
 for q in question:
-    job=solution.isPalindrome(q)
+    job = solution.isPalindrome(q)
     result.append(job)
 print(result)
-if result==answer:
+if result == answer:
     print('correct')
 else:
     print('wrong')
 
 ## Other solutions
-#str(x)==str(x)[::-1]
+# str(x)==str(x)[::-1]

@@ -46,7 +46,7 @@ piles.length <= H <= 10^9
 #                 k_hi = k_mid+1
 #
 #         return k_low
-    ##############
+##############
 def minEatingSpeed(piles, H):
     def feasible(speed) -> bool:
         # return sum(math.ceil(pile / speed) for pile in piles) <= H  # slower
@@ -54,7 +54,7 @@ def minEatingSpeed(piles, H):
 
     left, right = 1, max(piles)
     while left < right:
-        mid = left  + (right - left) // 2
+        mid = left + (right - left) // 2
         if feasible(mid):
             right = mid
         else:
@@ -62,7 +62,5 @@ def minEatingSpeed(piles, H):
     return left
 
 
-
-
-solution=Solution()
-print(solution.minEatingSpeed([2,6,3,6,2,6],6))
+solution = Solution()
+print(solution.minEatingSpeed([2, 6, 3, 6, 2, 6], 6))

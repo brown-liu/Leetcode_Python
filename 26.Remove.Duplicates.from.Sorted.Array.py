@@ -21,8 +21,9 @@ class Solution:
                 len_ += 1
         return len_
 
-li=[1,2,2,2,3,4,4,5,5,6,7]
-solution=Solution()
-a1=solution.removeDuplicates1(li)
-a2=solution.removeDuplicates2(li)
+
+li = [1, 2, 2, 2, 3, 4, 4, 5, 5, 6, 7]
+solution = Solution()
+a1 = solution.removeDuplicates1(li)
+a2 = solution.removeDuplicates2(li)
 print(f'a1=>{a1}\na2=>{a2}')

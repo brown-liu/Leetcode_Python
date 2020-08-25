@@ -21,9 +21,11 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
+
+
 class Solution:
     def hasPathSum(self, root: TreeNode, sum: int) -> bool:
-        count_sum=0
-        while root!=None:
-            count_sum+=root.val
+        count_sum = 0
+        while root != None:
+            count_sum += root.val
             pass

@@ -5,12 +5,13 @@ import time
 class Solution:
 
     def V1maxProfit(self, prices):
-        possibility=[0]
+        possibility = [0]
         for idx, price in enumerate(prices):
-            for j in prices[idx+1:]:
-                if j>price:
-                    possibility.append(j-price)
+            for j in prices[idx + 1:]:
+                if j > price:
+                    possibility.append(j - price)
         return max(possibility)
+
     def V2maxProfitV1(self, prices):
         n = len(prices)
         a, b = 0, 0
@@ -36,10 +37,8 @@ class Solution:
         return result
 
 
+example = [23, 43, 6, 98, 2, 3, 1, 2, 3]
 
-example=[23,43,6,98,2,3,1,2,3]
-
-solution=Solution()
-
+solution = Solution()
 
 print(solution.V1maxProfit(example))

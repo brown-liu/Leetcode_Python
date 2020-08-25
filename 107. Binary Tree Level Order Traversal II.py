@@ -21,6 +21,8 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
+
+
 class Solution:
     class Solution:
         def levelOrderBottom(self, root: TreeNode):
@@ -40,4 +42,3 @@ class Solution:
                 seeifmt = listcarryseeifmt
                 result.append(listcarrycurrentandnext)
             return result[::-1]
-

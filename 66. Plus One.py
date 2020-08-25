@@ -15,24 +15,26 @@ Input: [4,3,2,1]
 Output: [4,3,2,2]
 Explanation: The array represents the integer 4321."""
 
+
 class Solution:
-    def plusOne(self, digits) :
-        if digits==[0]:
+    def plusOne(self, digits):
+        if digits == [0]:
             return [1]
-        dig=''
+        dig = ''
         for i in digits:
-            dig+=str(i)
-        number=int(dig)
-        number+=1
-        strNum=str(number)
+            dig += str(i)
+        number = int(dig)
+        number += 1
+        strNum = str(number)
         return [i for i in strNum]
 
-testSet=[['2','4','5','2'],['0'],['1','9'],['1','2','3']]
+
+testSet = [['2', '4', '5', '2'], ['0'], ['1', '9'], ['1', '2', '3']]
 
 ## Alternative
 # return list(map(int, list(str(int(''.join(map(str, digits)))+1))))
 
 
-solution=Solution()
+solution = Solution()
 for i in (testSet):
     print(solution.plusOne(i))

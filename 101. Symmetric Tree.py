@@ -24,6 +24,8 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
+
+
 class Solution:
 
     def isSymmetric(self, root: TreeNode) -> bool:
@@ -36,6 +38,7 @@ class Solution:
             if not root1 or not root2:
                 return False
 
-            return root1.val == root2.val and helper_func(root1.left, root2.right) and helper_func(root1.right,root2.left)
+            return root1.val == root2.val and helper_func(root1.left, root2.right) and helper_func(root1.right,
+                                                                                                   root2.left)
 
         return helper_func(root.left, root.right)

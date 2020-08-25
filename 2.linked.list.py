@@ -8,60 +8,61 @@ Double linked => node point to the next and previous node.
 List Node is not a pre-set data type in python = > have to make one up when needed
 '''
 
+
 ###################_____this is an example of ListNode _______-######################################
 class ListNode():
     # __init__ as constructor
-    def __init__(self,value):
-        self.value=value
+    def __init__(self, value):
+        self.value = value
         # 'next' works like a C pointer to assign the address for next node
-        self.next=None
+        self.next = None
 
-    def has_value(self,value):
-        #check if init is done.
-        if self.value==value:
+    def has_value(self, value):
+        # check if init is done.
+        if self.value == value:
             return True
         else:
             return False
 
+
 class Single_Linked_list():
     def __init__(self):
-        self.head=None
-        self.tail=None
+        self.head = None
+        self.tail = None
         return
 
-    def Add_list(self,item):
-        if not isinstance(item,ListNode):
-            item=ListNode(item)
+    def Add_list(self, item):
+        if not isinstance(item, ListNode):
+            item = ListNode(item)
 
         if self.head == None:
-            self.head=item
+            self.head = item
         else:
-            self.tail.next=item
-        self.tail=item
+            self.tail.next = item
+        self.tail = item
         return
 
-
     def List_length(self):
-        count=0
-        current_node=self.head
-        while current_node!= None:
-            count+=1
-            current_node=current_node.next
+        count = 0
+        current_node = self.head
+        while current_node != None:
+            count += 1
+            current_node = current_node.next
         return count
 
     def Print_list(self):
-        current_node=self.head
-        while current_node!=None:
+        current_node = self.head
+        while current_node != None:
             print(current_node.value)
-            current_node=current_node.next
+            current_node = current_node.next
         return
 
-    def Search(self,value):
-        current_node=self.head
-        index=-1
-        while current_node!=None:
-            index+=1
-            if current_node.value==value:
+    def Search(self, value):
+        current_node = self.head
+        index = -1
+        while current_node != None:
+            index += 1
+            if current_node.value == value:
                 print(f"found{value} in {index}th Node")
                 current_node = current_node.next
 
@@ -93,17 +94,3 @@ class Single_Linked_list():
         return ans
 
 '''
-
-
-
-
-
-
-
-
-
-
-
-
-
-

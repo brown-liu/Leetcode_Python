@@ -2,7 +2,6 @@ from timeit import timeit
 import random
 
 
-
 class Sorting:
 
     def __init__(self, max_array_length, number_of_array):
@@ -57,28 +56,24 @@ class Sorting:
 
     @staticmethod
     def merge_sort(int_array):
-        n=len(int_array)
-        if n <2:
+        n = len(int_array)
+        if n < 2:
             return int_array
-        mid= n//2
-        left= Sorting.merge_sort(int_array[:mid])
-        right=Sorting.merge_sort(int_array[mid:])
-        left_pointer,right_pointer=0,0
-        result=[]
-        while left_pointer<len(left) and right_pointer <len(right):
-            if left[left_pointer]<right[right_pointer]:
+        mid = n // 2
+        left = Sorting.merge_sort(int_array[:mid])
+        right = Sorting.merge_sort(int_array[mid:])
+        left_pointer, right_pointer = 0, 0
+        result = []
+        while left_pointer < len(left) and right_pointer < len(right):
+            if left[left_pointer] < right[right_pointer]:
                 result.append(left[left_pointer])
-                left_pointer+=1
+                left_pointer += 1
             else:
                 result.append(right[right_pointer])
-                right_pointer+=1
-        result+=left[left_pointer:]
-        result+=right[right_pointer:]
+                right_pointer += 1
+        result += left[left_pointer:]
+        result += right[right_pointer:]
         return result
-
-
-
-
 
 
 ######################################### Auto Testing#########################################################
@@ -86,4 +81,3 @@ test = Sorting(10, 10)
 
 for item in test.int_array:
     print(f'{item}=====>{Sorting.merge_sort(item)}\n')
-

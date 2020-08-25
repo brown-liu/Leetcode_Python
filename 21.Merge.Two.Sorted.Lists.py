@@ -3,6 +3,8 @@ class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
+
+
 '''
 class Solution:
     def mergeTwoLists(self, l1, l2):
@@ -58,6 +60,8 @@ class Solution:
             self.ref = self.ref.next
             
 '''
+
+
 class Solution(object):
     def mergeTwoLists(self, l1, l2):
         t = head = ListNode(0)
