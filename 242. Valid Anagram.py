@@ -6,13 +6,12 @@ class Solution:
         for char in s:
             if char in t:
                 print('yes')
-                t=t.replace(char,'')
+                t = t.replace(char, '')
         print(t)
         if t != '':
             return False
         else:
             return True
-
 
     def V2isAnagram(self, s: str, t: str) -> bool:
         if len(s) != len(t):
@@ -25,5 +24,5 @@ class Solution:
         return True
 
 
-solution=Solution()
-print(solution.isAnagram('abcd','dbca'))
+solution = Solution()
+print(solution.isAnagram('abcd', 'dbca'))

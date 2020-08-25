@@ -12,13 +12,15 @@ Example 2:
 
 Input: 1->1->2->3->3
 Output: 1->2->3'''
+
+
 class Solution:
     def deleteDuplicates(self, head: ListNode) -> ListNode:
-        current=head
+        current = head
         while current:
-            runner=current.next
-            while runner and runner==runner.next():
-                runner=runner.next
-            current.next=runner
-            current=runner
+            runner = current.next
+            while runner and runner == runner.next():
+                runner = runner.next
+            current.next = runner
+            current = runner
         return head

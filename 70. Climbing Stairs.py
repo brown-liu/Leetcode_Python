@@ -2,8 +2,9 @@ class Solution:
     def climbStairs(self, n: int) -> int:
         prev, current = 0, 1
         for i in range(n):
-
-            prev,current=current,prev+current
+            prev, current = current, prev + current
         return current
-solution=Solution()
+
+
+solution = Solution()
 print(solution.climbStairs(3))
