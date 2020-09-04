@@ -1,18 +1,10 @@
-# path=r'D:\PycharmProjects\leetcode_python'
-# import os
-# list_file=os.listdir(path)
-# for i in list_file:
-#     if i[1]=='_'or i[2]=='_':
-#         new=i.replace('_','.')
-#         os.rename(i,new)
-
-
-from collections import Counter
-
-s = 'asdgSDgasfga'
-a = [x for x in s]
-
-print(a.count('a'))
-x = '2 2 2 3 4 4'
-arr = map(int, x.split())
-print(max(list(arr)))
+def myPow(self, x: float, n: int) -> float:
+    total = 1
+    if x == 0:
+        return 0
+    for _ in range(1, n + 1):
+        total *= x
+    if x > 0:
+        return abs(total)
+    else:
+        return 1.0 / abs(total)
