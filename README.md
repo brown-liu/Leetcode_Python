@@ -10,6 +10,11 @@ li=list(range(10))
 <h5>Q9   [::-1]   slice  </h5>
 Reverse String <br>
 str(x)=>str(x)[::-1]
+##namedtuple from collections
+
+Exprience = namedtuple("myexperience":('driving','coding','flying','learning'))
+e=Experience(2,4,5,6)
+output>>> myexperince(driving = 2,coding = 4,flying =5,learning=6)
 
 string="ilovepython"
 sli=slice(3)=slice(0,3)=slice(0,3,1)
